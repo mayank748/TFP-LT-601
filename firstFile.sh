@@ -34,11 +34,21 @@ do
 	j=$(($j+1))
 done
 
+echo "******** crete directory dynamically************"
 
-
-
-
-
-
-
-
+folderName=""
+function filesFunction(){
+	echo `ls *.txt`
+}
+for file in `filesFunction`
+do
+	echo $file
+	folderName=`echo $file | awk -F. '{ print $1 }'`
+	echo $folderName
+	if [ -d $folderName ]
+		then
+			echo "Dir already exit"
+	else
+		mkdir $folderName
+	fi
+done
