@@ -1,0 +1,7 @@
+abc.txt
+firstFile.sh*
+pqr.txt
+xyz.txt
+
+shellScript:
+shellScript.sh*
